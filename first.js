@@ -15,11 +15,28 @@ const fs = require('fs');
 //     }
 // });
 
-fs.readFile('one.txt','utf8',(err,data)=>{
-    if(err){
-        console.log("Error While Reading File:",err);
-        return;
-    }
-    console.log("File Content:", data);
+// fs.readFile('one.txt','utf8',(err,data)=>{
+//     if(err){
+//         console.log("Error While Reading File:",err);
+//         return;
+//     }
+//     console.log("File Content:", data);
     
+// });
+
+// fs.appendFile('one.txt','\nToday i learent OS and FS module', (err) => {
+//     if(err){
+//         console.log("Error While Appending File:", err);    
+//         return;
+//     }    
+//     console.log("File Appended Successfully");
+    
+// });
+
+fs.unlink('one.txt',(err)=>{
+    if(err){
+        console.log("Error While Deleting File:", err);
+        return
+    }
+    console.log("File Deleted Successfully");  
 });
