@@ -1,1 +1,9 @@
-const express
+const express = require('express');
+const studentRoute = require('./routes/studentRoute');
+const app = express();
+const PORT = 80;
+app.use(express.json());
+app.use('/students', studentRoute);
+app.listen(PORT, () => {
+  console.log(`Server is running on port  http://localhost:${PORT}`);
+});
