@@ -1,18 +1,17 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://amit_jobanputra:amit2003@cluster3040.uzk8ozy.mongodb.net/Students', { useNewUrlParser: true, useUnifiedTopology: true });
+const express = require('express');
+// const studentRoutes = require('./studentRoutes');
+const app = express();
+const PORT=80;
+mongoose.connect('mongodb+srv://amit_jobanputra:123@cluster3040.uzk8ozy.mongodb.net/Students');
 
-const studentSchema = new mongoose.Schema({
-    name: String,
-    department: String,
-    startYear: Number,
-    endYear: Number,
-    enrollment:Number,
-    address:String,
+
+app.use(express.json());
+// app.use("/student",studentRoutes);
+
+app.listen(PORT,()=>{
+    console.log('Server is running on port: 127.0.0.1:'+PORT);
 });
-
-const Student=mongoose.model('Student', studentSchema);
-console.log("Connected to MongoDB");
-
 const student=new Student({
     name:"Amit Jobanputra",
     department:"MCA",
