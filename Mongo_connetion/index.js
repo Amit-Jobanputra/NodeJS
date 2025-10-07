@@ -13,19 +13,3 @@ app.use("/student",studentRoutes);
 app.listen(PORT,()=>{
     console.log('Server is running on port: 127.0.0.1:'+PORT);
 });
-const student=new Student({
-    name:"Amit Jobanputra",
-    department:"MCA",
-    startYear:2024,
-    endYear:2026,
-    enrollment:240823040,
-    address:"Rajkot"
-});
-student
-    .save()
-    .then(()=>{
-        console.log("Student Recored Saved");
-    })
-    .catch((error)=>{
-        console.log("Error Saving Student:",error);
-    });
