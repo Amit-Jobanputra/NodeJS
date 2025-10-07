@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const Student = require('./student');
 // const studentRoutes = require('./studentRoutes');
 const app = express();
 const PORT=80;
