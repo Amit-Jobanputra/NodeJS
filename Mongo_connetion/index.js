@@ -8,7 +8,7 @@ mongoose.connect('mongodb+srv://amit_jobanputra:123@cluster3040.uzk8ozy.mongodb.
 
 
 app.use(express.json());
-// app.use("/student",studentRoutes);
+app.use("/student",studentRoutes);
 
 app.listen(PORT,()=>{
     console.log('Server is running on port: 127.0.0.1:'+PORT);
