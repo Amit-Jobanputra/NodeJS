@@ -20,3 +20,4 @@ router.put('/update/:id', (req, res, next) => {
     studentController.update(req, res, next);
 });
 router.delete('/delete/:id', studentController.delete);
+module.exports=router
