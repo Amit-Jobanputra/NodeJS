@@ -3,7 +3,7 @@ const Student=require('./student');
 exports.index=(req,res)=>{
     Student.find()
     .then((students)=>{
-        res.send({message:"Students fetched successfully",students:students});
+                res.send({message:"Students fetched successfully",students:students});
     })
     .catch((error)=>{
         res.send({message:"Failed to fetch students",error:error});
